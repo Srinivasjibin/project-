@@ -1,14 +1,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import {BrowserRouter,Link,Switch,Route} from 'react-router-dom'
-
- import Login from './components/Login'
-
- import Registration from './components/Registration'
- import New from './components/New'
-import RegistrationForm from './components/RegistrationForm';
-import Form from './components/Form'
-import FormDemo from './components/FormDemo';
+import {BrowserRouter,Switch,Route} from 'react-router-dom'
 import Home from './components/Home'
 import Log from './components/Log'
 import Reg from './components/Reg'
@@ -16,61 +8,44 @@ import Userportal from './components/Userportal'
 import Adminlogin from './components/Adminlogin'
 import Adminportal from './components/Adminportal'
 import Catportal from './components/Catportal'
+import Catreg from './components/Catreg'
+import Catlogin from './components/Catlogin'
+import Viewissuecat from './components/Viewissuecat'
+import Logout from './components/Logout'
+import Listissuescat from './components/Listissuescat'
 
 export default function App(){
 
    return (    
-   <div>
-<h1 style={{color:'navyblue',height:'50px',textAlign:'center'}}> Welcome </h1>
+  /* <div>
 <BrowserRouter>
-<div className="col-sm" >
-<ul className="nav bg-dark justify-content">
-<nav className="nav-item " >
-   <Link className="nav-link" to="/Home" ><h2 style={{color:'white'}}>Home</h2></Link>
- </nav>
-<nav className="nav-item " >
-   <Link className="nav-link" to="/Adminlogin" ><h2 style={{color:'white'}}>Login</h2></Link>
- </nav>
+<div className="" style={{} }>
+  <div className="navbar-inner bg-dark" style={{height:35}} >
+  <div className="clearfix">
+    <div className="nav-collapse nav collapse_">
+ <ul className="nav sf-menu clearfix">
+<li><a  style={{textDecoration:"none"}} href="/Home"><h3 style={{color:"white"}}>Home</h3></a></li>
 
- </ul>
+<li style={{marginLeft:1000}}><a style={{textDecoration:"none"}} href="/Adminlogin"><h3 style={{color:"white"}}>Login</h3></a></li>
+</ul>
+</div>
+</div></div>
+<h1 align="center" style={{color:"red",align:"center"}}>Admin</h1>
+
+
  <p style={{color:'red'}}><marquee></marquee></p>
-
-       <Switch>
-           <Route path="/Adminlogin">
+   <Switch>
+       <Route path="/Adminlogin">
            <Adminlogin/>
-           </Route>
-           <Route path="/Home">
-           <Home/>
            </Route>
            <Route path="/Adminportal">
            <Adminportal/>
            </Route>
-           
-       </Switch>
-     </div>
-     </BrowserRouter>
-    </div>
-     
-    /* <div>
-<h1 style={{color:'navyblue',height:'50px',textAlign:'center'}}> Welcome </h1>
-<BrowserRouter>
-<div className="col-sm" >
-<ul className="nav bg-dark justify-content">
-<nav className="nav-item " >
-   <Link className="nav-link" to="/Home" ><h2 style={{color:'white'}}>Home</h2></Link>
- </nav>
-<nav className="nav-item" >
-<Link className="nav-link" to="/Reg"><h2 style={{color:'white'}}>Registration</h2></Link></nav>
-<nav className="nav-item " >
-   <Link className="nav-link" to="/Log" ><h2 style={{color:'white'}}>Login</h2></Link>
- </nav>
-
- </ul>
- <p style={{color:'red'}}><marquee>/* please register to resolve an issue </marquee></p>
-
-       <Switch>
          <Route path="/Reg">
            <Reg/>
+           </Route>
+           <Route path="/Catreg">
+           <Catreg/>
            </Route>
            <Route path="/Log">
            <Log/>
@@ -83,13 +58,125 @@ export default function App(){
            </Route>
            <Route path="/Catportal">
            <Catportal/>
-           </Route>
-           
+           </Route>        
        </Switch>
-     </div>
+       </div>
      </BrowserRouter>
-      </div>*/
+     
+      </div>  
+    )
+
+}*/
       
+       
+ /*    
+  <div>
+<BrowserRouter>
+<div className="" style={{} }>
+  <div className="navbar-inner bg-dark"  style={{height:35}}>
+  <div className="clearfix">
+    <div className="nav-collapse nav collapse_">
+ <ul className="nav sf-menu clearfix">
+<li><a  style={{textDecoration:"none"}} href="/Home"><h3 style={{color:"white"}}>Home</h3></a></li>
+
+<li style={{marginLeft:30}}><a style={{textDecoration:"none"}} href="/Reg"><h3 style={{color:"white"}}>Registration</h3></a></li>
+<li style={{marginLeft:900}}><a style={{textDecoration:"none"}} href="/Log"><h3 style={{color:"white"}}>Login</h3></a></li>
+</ul>
+</div>
+</div></div>
+<h1 align="center" style={{color:"red"}}>User</h1>
+   <Switch>
+       <Route path="/Adminlogin">
+           <Adminlogin/>
+           </Route>
+           <Route path="/Adminportal">
+           <Adminportal/>
+           </Route>
+         <Route path="/Reg">
+           <Reg/>
+           </Route>
+           <Route path="/Catreg">
+           <Catreg/>
+           </Route>
+           <Route path="/Log">
+           <Log/>
+           </Route>
+           <Route path="/Home">
+           <Home/>
+           </Route>
+           <Route path="/Userportal">
+           <Userportal/>
+           </Route>
+           <Route path="/Catportal">
+           <Catportal/>
+           </Route>        
+       </Switch>
+       </div>
+     </BrowserRouter>
+     
+      </div>  
+    )
+
+}*/
+
+<div >
+<BrowserRouter>
+<div className="" >
+
+  <div className="navbar-inner bg-dark" style={{height:35}} >
+  <div className="clearfix">
+    <div className="nav-collapse nav collapse_">
+ <ul className="nav sf-menu clearfix">
+<li><a  style={{textDecoration:"none"}} href="/Home"><h3 style={{color:"white"}}>Home</h3></a></li>
+
+<li style={{marginLeft:30}}><a style={{textDecoration:"none"}} href="/Catreg"><h3 style={{color:"white"}}>Registration</h3></a></li>
+<li style={{marginLeft:900}}><a style={{textDecoration:"none"}} href="/Catlogin"><h3 style={{color:"white"}}>Login</h3></a></li>
+</ul>
+</div>
+</div></div>
+<h1 align="center"  style={{color:"red",align:"center"}}>Category Rep</h1>
+
+
+ 
+       <Switch>
+       <Route path="/Adminlogin">
+           <Adminlogin/>
+           </Route>
+           <Route path="/Adminportal">
+           <Adminportal/>
+           </Route>
+         <Route path="/Reg">
+           <Reg/>
+           </Route>
+           <Route path="/Catreg">
+           <Catreg/>
+           </Route>
+           <Route path="/Catlogin">
+           <Catlogin/>
+           </Route>
+           <Route path="/Home">
+           <Home/>
+           </Route>
+           <Route path="/Userportal">
+           <Userportal/>
+           </Route>
+           <Route path="/Catportal">
+           <Catportal/>
+           </Route>   
+           <Route path="/Viewissuecat">
+           <Viewissuecat/>
+           </Route>
+           <Route path="/Logout">
+           <Logout/>
+           <Route path="/Listissuescat">
+           <Listissuescat/>
+           </Route>
+           </Route>     
+       </Switch>
+       </div>
+     </BrowserRouter>
+     
+      </div>  
     )
 
 }
