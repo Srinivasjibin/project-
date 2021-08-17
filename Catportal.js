@@ -4,21 +4,30 @@ import {BrowserRouter,Link,Switch,Route} from 'react-router-dom'
 import {useParams} from 'react-router-dom'
 import Viewissuecat from './Viewissuecat'
 import Logout from './Logout'
-import Listissuecat from './Listissuescat'
+import { useHistory } from "react-router-dom";
+import Listissuescat from './Listissuescat'
+
 function Category()
 {
+  let history=useHistory();
+  const handlesubmit1=()=>{
+    history.push("/Viewissuecat")
+    }
+    const handlesubmit2=()=>{
+      history.push("/Logout")
+        
+  
+      }
 return(<div>
-    <h1 className="text-center text-info">WELCOME </h1>
-    <BrowserRouter>
+ 
+
     <div className="col-sm" >
-    <ul className="nav bg-light justify-content">
-    <nav className="nav-item " >
-       <Link className="nav-link" to="/Viewissuecat" ><h3 style={{color:'black'}}>View issues</h3></Link>
-     </nav>
-     <nav className="nav-item " >
-       <Link className="nav-link" to="/Logout" ><h3 style={{color:'black'}}>Logout</h3></Link>
-     </nav>
-     </ul>
+   
+ 
+       <button  style={{marginLeft:30,color:"red",}} type="submit" onClick={handlesubmit1}>View issues</button>
+       <button style={{marginLeft:1000}} type="submit" onClick={handlesubmit2}>Logout</button>
+      </div>
+       <BrowserRouter>
      <Switch>
          <Route path="/Viewissuecat">
            <Viewissuecat/>
@@ -26,11 +35,11 @@ return(<div>
            <Route path="/Logout">
            <Logout/>
            </Route>
-           <Route path="/Listissuecat">
-           <Listissuecat/>
+           <Route path="/Listissuescat">
+           <Listissuescat/>
            </Route>
            </Switch>
-           </div>
+          
            </BrowserRouter>
            </div>
 )
